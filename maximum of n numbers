@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main() {
+    int N, num, max;
+
+    scanf("%d", &N);
+
+    // Read the first number and initialize max with it
+    scanf("%d", &num);
+    max = num;
+
+    // Read the remaining N-1 numbers and update max if needed
+    for (int i = 1; i < N; i++) {
+        scanf("%d", &num);
+        if (num > max) {
+            max = num;
+        }
+    }
+
+    printf("%d\n", max);
+
+    return 0;
+}
